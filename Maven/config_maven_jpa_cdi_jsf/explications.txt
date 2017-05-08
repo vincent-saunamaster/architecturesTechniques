@@ -1,0 +1,22 @@
+config OK avec @SessionScoped
+
+COUCHE METIER :
+-@ManagedBean //import javax.faces.bean.ManagedBean;
+-@Entity
+
+COUCHE SERVICE :
+@Named
+
+COUCHE DAO :
+@Named
+@ApplicationScoped //import javax.enterprise.context.ApplicationScoped;
+
+COUCHE CONTROLLER :
+@Named
+@SessionScoped // import javax.enterprise.context.SessionScoped;
+
+META-INF dans src/main/resources pour persistence.xml et beans.xml
+
+implements Serializable sur les classes : metier, service et managedBean
+
+remplacer les new par les @inject au niveau des package mbeans dao et service
